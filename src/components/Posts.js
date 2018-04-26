@@ -1,8 +1,17 @@
+// EXTERNAL DEPENDENCIES
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+
+// INTERNAL DEPENDENCIES
 import { getPosts } from '../state/reducer';
 
+// LOCAL VARIABLES
+const titleStyles = {
+  fontWeight: 700
+}
+
+// COMPONENT DEFINITION
 class Posts extends Component {
   componentDidMount() {
     axios.get('https://jsonplaceholder.typicode.com/posts')
@@ -17,7 +26,10 @@ class Posts extends Component {
     ? 'Loading...'
     : this.props.posts.map(post =>
       <div key={post.id}>
-        <h3>{post.title}</h3>
+        <h3 style={titleStyles}>{post.title}</h3>
+        <p>{post.body}</p>
+
+        <br />
       </div>
       )
     return (
