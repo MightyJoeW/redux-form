@@ -1,14 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
+
 import PostTitle from './PostTitle';
 import PostPost from './PostPost';
-
 import { addPost } from '../state/reducer';
-import { connect } from 'react-redux';
 
 const styles = {
     card: {
@@ -30,7 +30,7 @@ const styles = {
 
 function SimpleCard(props) {
     const { classes } = props;
-console.log(props.onAddPost)
+    // console.log(props.onAddPost)
     return (
         <div>
             <Card className={classes.card}>
@@ -39,7 +39,7 @@ console.log(props.onAddPost)
                         Add Post
                     </Typography>
                     <PostTitle onChange={(e) => {
-                        console.log('hello');
+                        // console.log(e.target.value);
                         props.onAddPost(e.target.value);
                     }}/>
                     <PostPost />
@@ -57,8 +57,10 @@ SimpleCard.propTypes = {
     onAddPost: PropTypes.func.isRequired,
 };
 
-export default connect(
-    (state) => {console.log(state)},
-    {
-        onAddPost: addPost
-    })(withStyles(styles)(SimpleCard));
+// Below, we are mapping state to props and dispatching
+// connect state
+// set onAddPost to addPost for clarity in code
+// use material-ui currying
+
+export default connect(state => {console.log(state)},
+    { onAddPost: addPost })(withStyles(styles)(SimpleCard));

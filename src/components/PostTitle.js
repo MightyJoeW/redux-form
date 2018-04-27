@@ -14,7 +14,10 @@ const styles = theme => ({
 });
 
 function Inputs(props) {
-    const { classes, ...other } = props;
+    const {
+        classes,
+        ...other
+    } = props;
     return (
         <div className={classes.container}>
             <Input
@@ -24,6 +27,8 @@ function Inputs(props) {
                     'aria-label': 'Description',
                 }}
                 { ...other }
+                //let's this mui component know that it has a prop (onChange) on another component
+                //see https://material-ui-next.com/api/input/#__next for all props Input can have
             />
         </div>
     );
