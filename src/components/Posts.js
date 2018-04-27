@@ -28,7 +28,6 @@ class Posts extends Component {
       <div key={post.id}>
         <h3 style={titleStyles}>{post.title}</h3>
         <p>{post.body}</p>
-
         <br />
       </div>
       )

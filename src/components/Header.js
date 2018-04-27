@@ -1,5 +1,7 @@
+// EXTERNAL DEPENDENCIES
 import React from 'react'
 
+// LOCAL VARIABLES
 const styles = {
     background: '#2d2b2b',
     color: '#fff',
@@ -8,6 +10,7 @@ const styles = {
     textAlign: 'center'
 }
 
+// COMPONENT DEFINITION
 const Header = () => {
   return (
     <div style={styles}>
