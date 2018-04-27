@@ -22,7 +22,7 @@ export function addEntry(entry) {
 export function addPost(post) {
     return {
         type: ADD_POST,
-        payload: (post)
+        payload: post
     }
 }
 
@@ -46,11 +46,11 @@ function reducer (state = initialState, action) {
     case ADD_ENTRY:
         return Object.assign({}, state, [...state.entry, action.payload])
     case ADD_POST:
-        return Object.assign({}, state, { post: action.payload })
+            return Object.assign({}, state, { posts: [{ userId: 1, id: 100, title: action.payload, body: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada.'}, ...state.posts] })
     case ADD_TITLE:
-            return Object.assign({}, state, { title: action.payload })
+        return Object.assign({}, state, { title: action.payload })
     case GET_POSTS:
-        return Object.assign({}, state, {posts: action.payload})
+        return Object.assign({}, state, { posts: action.payload})
         default:
             return state
     }

@@ -17,7 +17,7 @@ class Posts extends Component {
     axios.get('https://jsonplaceholder.typicode.com/posts')
     .then(res => {
       this.props.getPosts(res.data)
-      console.log(res.data)
+      // console.log(res.data)
     })
   }
 

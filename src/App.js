@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import CssBaseline from 'material-ui/CssBaseline';
 
 // INTERNAL DEPENDENCIES
-import Header from './components/Header';
+import AppBar from './components/AppBar';
 import PostForm from './components/PostForm';
 import Posts from './components/Posts';
 
@@ -19,7 +19,7 @@ export default class App extends Component {
     return (
       <div style={styles}>
       <CssBaseline />
-        <Header />
+        <AppBar />
         <PostForm />
         <Posts />
       </div>
