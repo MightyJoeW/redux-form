@@ -26,9 +26,9 @@ function Inputs(props) {
                 inputProps={{
                     'aria-label': 'Description',
                 }}
-                { ...other }
-                //let's this mui component know that it has a prop (onChange) on another component
-                //see https://material-ui-next.com/api/input/#__next for all props Input can have
+                {...other}
+            //let's this mui component know that it has a prop (onChange) on another component
+            //see https://material-ui-next.com/api/input/#__next for all props Input can have
             />
         </div>
     );

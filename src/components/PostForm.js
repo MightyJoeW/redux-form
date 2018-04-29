@@ -12,7 +12,7 @@ import { addPost } from '../state/reducer';
 
 const styles = {
     card: {
-        minWidth: 275,
+        minWidth: 275
     },
     bullet: {
         display: 'inline-block',
@@ -41,7 +41,7 @@ function SimpleCard(props) {
                     <PostTitle onChange={(e) => {
                         // console.log(e.target.value);
                         props.onAddPost(e.target.value);
-                    }}/>
+                    }} />
                     <PostPost />
                 </CardContent>
                 <CardActions>
@@ -62,5 +62,5 @@ SimpleCard.propTypes = {
 // set onAddPost to addPost for clarity in code
 // use material-ui currying
 
-export default connect(state => {console.log(state)},
+export default connect(state => { console.log(state) },
     { onAddPost: addPost })(withStyles(styles)(SimpleCard));

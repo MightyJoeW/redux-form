@@ -9,8 +9,7 @@ import Posts from './components/Posts';
 
 // LOCAL VARIABLES
 const styles = {
-  margin: 'auto',
-  width: '90%'
+  margin: 'auto'
 }
 
 // COMPONENT DEFINITION
@@ -18,7 +17,7 @@ export default class App extends Component {
   render() {
     return (
       <div style={styles}>
-      <CssBaseline />
+        <CssBaseline />
         <AppBar />
         <PostForm />
         <Posts />

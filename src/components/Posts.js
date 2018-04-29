@@ -6,35 +6,39 @@ import { connect } from 'react-redux';
 // INTERNAL DEPENDENCIES
 import { getPosts } from '../state/reducer';
 
+const postStyles = {
+  margin: 30
+}
+
 // LOCAL VARIABLES
 const titleStyles = {
-  fontWeight: 700
+  fontWeight: 700,
 }
 
 // COMPONENT DEFINITION
 class Posts extends Component {
   componentDidMount() {
     axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then(res => {
-      this.props.getPosts(res.data)
-      // console.log(res.data)
-    })
+      .then(res => {
+        this.props.getPosts(res.data)
+        // console.log(res.data)
+      })
   }
 
   render() {
     const postItems = !this.props.posts.length
-    ? 'Loading...'
-    : this.props.posts.map(post =>
-      <div key={post.id}>
-        <h3 style={titleStyles}>{post.title}</h3>
-        <p>{post.body}</p>
-        <br />
-      </div>
+      ? 'Loading...'
+      : this.props.posts.map(post =>
+        <div style={postStyles} key={post.id}>
+          <h3 style={titleStyles}>{post.title}</h3>
+          <p>{post.body}</p>
+          <br />
+        </div>
       )
     return (
       <div>
         <h1>Posts</h1>
-        { postItems }
+        {postItems}
       </div>
     )
   }
