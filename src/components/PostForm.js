@@ -58,9 +58,8 @@ SimpleCard.propTypes = {
 };
 
 // Below, we are mapping state to props and dispatching
-// connect state
+// connect has the same 3 arguments (1. set state to an object, 2. dispatched actions, the component)
 // set onAddPost to addPost for clarity in code
-// use material-ui currying
 
-export default connect(state => { console.log(state) },
+export default connect(state => { },
     { onAddPost: addPost })(withStyles(styles)(SimpleCard));
