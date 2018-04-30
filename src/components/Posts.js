@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 // INTERNAL DEPENDENCIES
 import { getPosts } from '../state/reducer';
+import CircleLoad from './CircleLoad';
 
 const postStyles = {
   margin: 30
@@ -27,7 +28,7 @@ class Posts extends Component {
 
   render() {
     const postItems = !this.props.posts.length
-      ? 'Loading...'
+      ? <CircleLoad />
       : this.props.posts.map(post =>
         <div style={postStyles} key={post.id}>
           <h3 style={titleStyles}>{post.title}</h3>
