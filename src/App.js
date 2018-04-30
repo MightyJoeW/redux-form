@@ -17,7 +17,7 @@ export default class App extends Component {
   render() {
     return (
       <div style={styles}>
-      <CssBaseline />
+        <CssBaseline />
         <AppBar />
         <PostForm />
         <Posts />

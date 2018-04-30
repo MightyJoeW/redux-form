@@ -8,11 +8,11 @@ import Typography from 'material-ui/Typography';
 
 import PostTitle from './PostTitle';
 import PostPost from './PostPost';
-import { addPost } from '../state/reducer';
+import { postAdd } from '../state/reducer';
 
 const styles = {
     card: {
-        minWidth: 275,
+        minWidth: 275
     },
     bullet: {
         display: 'inline-block',
@@ -30,7 +30,7 @@ const styles = {
 
 function SimpleCard(props) {
     const { classes } = props;
-    // console.log(props.onAddPost)
+    // console.log(props.onpostAdd)
     return (
         <div>
             <Card className={classes.card}>
@@ -38,10 +38,7 @@ function SimpleCard(props) {
                     <Typography className={classes.title} color="textSecondary">
                         Add Post
                     </Typography>
-                    <PostTitle onChange={(e) => {
-                        // console.log(e.target.value);
-                        props.onAddPost(e.target.value);
-                    }}/>
+                    <PostTitle />
                     <PostPost />
                 </CardContent>
                 <CardActions>
@@ -54,13 +51,12 @@ function SimpleCard(props) {
 
 SimpleCard.propTypes = {
     classes: PropTypes.object.isRequired,
-    onAddPost: PropTypes.func.isRequired,
+    onpostAdd: PropTypes.func.isRequired,
 };
 
 // Below, we are mapping state to props and dispatching
-// connect state
-// set onAddPost to addPost for clarity in code
-// use material-ui currying
+// Same layout as with mapStateToProps:
+//   export default connect (state, { dispatched action })(Component)
+// set onpostAdd to postAdd for clarity in code
 
-export default connect(state => {},
-    { onAddPost: addPost })(withStyles(styles)(SimpleCard));
+export default connect(state => { }, { onpostAdd: postAdd })(withStyles(styles)(SimpleCard));

@@ -1,8 +1,9 @@
-// ACTION TYPES
-const GET_POSTS = 'GET_POSTS';
-const ADD_ENTRY = 'ADD_ENTRY';
-const ADD_POST = 'ADD_POST';
-const ADD_TITLE = 'ADD_TITLE';
+import {
+    ENTRY_ADD,
+    TITLE_ADD,
+    POSTS_GET,
+    POST_ADD
+} from './action-types';
 
 // INITIAL STATE
 let initialState = {
@@ -13,29 +14,29 @@ let initialState = {
 }
 
 // ACTION CREATORS
-export function addEntry(entry) {
+export function entryAdd(entry) {
     return {
-        type: ADD_ENTRY,
+        type: ENTRY_ADD,
         payload: entry
     }
 }
-export function addPost(post) {
+export function postAdd(post) {
     return {
-        type: ADD_POST,
+        type: POST_ADD,
         payload: post
     }
 }
 
-export function addTitle(title) {
+export function titleAdd(title) {
     return {
-        type: ADD_TITLE,
+        type: TITLE_ADD,
         payload: title
     }
 }
 
-export function getPosts(posts) {
+export function postsGet(posts) {
     return {
-        type: GET_POSTS,
+        type: POSTS_GET,
         payload: posts
     }
 }
@@ -43,13 +44,13 @@ export function getPosts(posts) {
 // REDUCERS
 function reducer (state = initialState, action) {
     switch(action.type) {
-    case ADD_ENTRY:
+    case ENTRY_ADD:
         return Object.assign({}, state, [...state.entry, action.payload])
-    case ADD_POST:
-            return Object.assign({}, state, { posts: [{ userId: 1, id: 100, title: action.payload, body: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada.'}, ...state.posts] })
-    case ADD_TITLE:
+    case POST_ADD:
+            return Object.assign({}, state, { posts: action.payload})
+    case TITLE_ADD:
         return Object.assign({}, state, { title: action.payload })
-    case GET_POSTS:
+    case POSTS_GET:
         return Object.assign({}, state, { posts: action.payload})
         default:
             return state
