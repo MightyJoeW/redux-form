@@ -1,3 +1,5 @@
+import createReducer from '../state/createReducer';
+
 import {
     ENTRY_ADD,
     TITLE_ADD,
@@ -20,6 +22,7 @@ export function entryAdd(entry) {
         payload: entry
     }
 }
+
 export function postAdd(post) {
     return {
         type: POST_ADD,
