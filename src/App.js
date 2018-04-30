@@ -9,8 +9,7 @@ import Posts from './components/Posts';
 
 // LOCAL VARIABLES
 const styles = {
-  margin: 'auto',
-  width: '90%'
+  margin: 'auto'
 }
 
 // COMPONENT DEFINITION

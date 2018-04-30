@@ -29,6 +29,8 @@ function Inputs(props) {
                 { ...other }
                 //let's this mui component know that it has a prop (onChange) on another component
                 //see https://material-ui-next.com/api/input/#__next for all props Input can have
+                //* another option is putting the onChange in this file and having a method in PostForm
+                //* refer to this
             />
         </div>
     );

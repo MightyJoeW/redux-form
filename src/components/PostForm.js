@@ -62,5 +62,5 @@ SimpleCard.propTypes = {
 // set onAddPost to addPost for clarity in code
 // use material-ui currying
 
-export default connect(state => {console.log(state)},
+export default connect(state => {},
     { onAddPost: addPost })(withStyles(styles)(SimpleCard));
