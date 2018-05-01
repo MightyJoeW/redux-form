@@ -4,7 +4,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 
 // INTERNAL DEPENDENCIES
-import { postAdd } from '../state/reducer';
+import { postsGet } from '../state/reducer';
 import CircleLoad from './CircleLoad';
 
 const postStyles = {
@@ -21,8 +21,8 @@ class Posts extends Component {
   componentDidMount() {
     axios.get('https://jsonplaceholder.typicode.com/posts')
       .then(res => {
-        this.props.postAdd(res.data)
-        // console.log(res.data)
+        this.props.postsGet(res.data)
+        console.log(res.data)
       })
   }
 
@@ -52,4 +52,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { postAdd })(Posts);
+export default connect(mapStateToProps, { postsGet })(Posts);
