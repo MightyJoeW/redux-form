@@ -12,8 +12,11 @@ import { postAdd } from '../state/reducer';
 
 const styles = {
     card: {
-        marginTop: 64,
-        minWidth: 275
+        marginTop: 100,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        minWidth: 275,
+        width: '85%'
     },
     bullet: {
         display: 'inline-block',
@@ -22,7 +25,7 @@ const styles = {
     },
     title: {
         marginBottom: 16,
-        fontSize: 14,
+        fontSize: 14
     },
     pos: {
         marginBottom: 12,

@@ -7,13 +7,20 @@ import { connect } from 'react-redux';
 import { postsGet } from '../state/reducer';
 import CircleLoad from './CircleLoad';
 
+
+const container = {
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  width: '85%'
+}
+
 const postStyles = {
   margin: 30
 }
 
 // LOCAL VARIABLES
 const titleStyles = {
-  fontWeight: 700,
+  fontWeight: 700
 }
 
 // COMPONENT DEFINITION
@@ -37,7 +44,7 @@ class Posts extends Component {
         </div>
       )
     return (
-      <div>
+      <div style={container}>
         <h1>Posts</h1>
         {postItems}
       </div>

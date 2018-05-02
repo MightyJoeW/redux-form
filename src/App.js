@@ -9,7 +9,7 @@ import Posts from './components/Posts';
 
 // LOCAL VARIABLES
 const styles = {
-  backgroundColor: '#F2F2F2',
+  color: '#4f4f4f',
   fontFamily: 'arial',
   margin: 'auto'
 }
