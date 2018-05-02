@@ -1,7 +1,6 @@
 // Internal Dependencies
 import {
-    POSTS_GET,
-    POST_ADD
+    POSTS_GET
 } from './action-types';
 
 // Action Creator Definitions
