@@ -4,21 +4,29 @@ import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
+import IconButton from 'material-ui/IconButton';
+import Loop from '@material-ui/icons/Loop';
 
 const styles = {
     root: {
-        flexGrow: 1,
-    },
+        flexGrow: 1
+    }
 };
+
+const customStyles = {
+    backgroundColor: '#fff',
+    color: '#BDBCBF'
+}
 
 function SimpleAppBar(props) {
     const { classes } = props;
     return (
         <div className={classes.root}>
-            <AppBar position="static" color="default">
+            <AppBar position="fixed" color="default" style={customStyles}>
                 <Toolbar>
+                        <Loop style={{marginRight: 5}}/>
                     <Typography variant="title" color="inherit">
-                        The Redux Poster
+                        the-redux-poster
           </Typography>
                 </Toolbar>
             </AppBar>

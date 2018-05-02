@@ -9,6 +9,8 @@ import Posts from './components/Posts';
 
 // LOCAL VARIABLES
 const styles = {
+  color: '#4f4f4f',
+  fontFamily: 'arial',
   margin: 'auto'
 }
 

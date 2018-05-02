@@ -6,13 +6,18 @@ import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 
+import Header from './PostFormHeader';
 import PostTitle from './PostTitle';
 import PostPost from './PostPost';
 import { postAdd } from '../state/reducer';
 
 const styles = {
     card: {
-        minWidth: 275
+        marginTop: 100,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        minWidth: 275,
+        width: '85%'
     },
     bullet: {
         display: 'inline-block',
@@ -21,7 +26,7 @@ const styles = {
     },
     title: {
         marginBottom: 16,
-        fontSize: 14,
+        fontSize: 14
     },
     pos: {
         marginBottom: 12,
@@ -34,6 +39,7 @@ function SimpleCard(props) {
     return (
         <div>
             <Card className={classes.card}>
+            <Header />
                 <CardContent>
                     <Typography className={classes.title} color="textSecondary">
                         Add Post

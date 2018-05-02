@@ -4,11 +4,15 @@ import createReducer from '../createReducer';
 
 // Internal Dependencies
 import {
-    POST_ADD
+    POSTS_GET
 } from '../action-types';
 
 
 // Reducer Definitions
-export const postAdd = createReducer({}, {
-    [POST_ADD]: (state, action) => action.payload,
+export const postsGet = createReducer({}, {
+    [POSTS_GET]: (state, action) => action.payload,
 });
+
+export default combineReducers({
+    postsGet
+})

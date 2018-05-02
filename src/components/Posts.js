@@ -4,8 +4,15 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 
 // INTERNAL DEPENDENCIES
-import { postAdd } from '../state/reducer';
+import { postsGet } from '../state/reducer';
 import CircleLoad from './CircleLoad';
+
+
+const container = {
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  width: '85%'
+}
 
 const postStyles = {
   margin: 30
@@ -13,7 +20,7 @@ const postStyles = {
 
 // LOCAL VARIABLES
 const titleStyles = {
-  fontWeight: 700,
+  fontWeight: 700
 }
 
 // COMPONENT DEFINITION
@@ -21,8 +28,8 @@ class Posts extends Component {
   componentDidMount() {
     axios.get('https://jsonplaceholder.typicode.com/posts')
       .then(res => {
-        this.props.postAdd(res.data)
-        // console.log(res.data)
+        this.props.postsGet(res.data)
+        console.log(res.data)
       })
   }
 
@@ -37,7 +44,7 @@ class Posts extends Component {
         </div>
       )
     return (
-      <div>
+      <div style={container}>
         <h1>Posts</h1>
         {postItems}
       </div>
@@ -52,4 +59,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { postAdd })(Posts);
+export default connect(mapStateToProps  , { postsGet })(Posts);

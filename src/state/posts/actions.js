@@ -1,4 +1,4 @@
 // Internal Dependencies
-import { postAdd } from './action-creators';
+import { postsGet } from './action-creators';
 
 // Action Definitions
