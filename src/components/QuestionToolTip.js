@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import Button from 'material-ui/Button';
 import HelpIcon from '@material-ui/icons/Help';
 import IconButton from 'material-ui/IconButton';
 import Tooltip from 'material-ui/Tooltip';

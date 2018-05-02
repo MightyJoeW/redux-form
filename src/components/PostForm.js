@@ -35,7 +35,7 @@ const styles = {
 
 function SimpleCard(props) {
     const { classes } = props;
-    // console.log(props.onpostAdd)
+    // console.log(props.onPostAdd)
     return (
         <div>
             <Card className={classes.card}>
@@ -44,7 +44,10 @@ function SimpleCard(props) {
                     <Typography className={classes.title} color="textSecondary">
                         Add Post
                     </Typography>
-                    <PostTitle />
+                    <PostTitle onChange={(e) => {
+                        props.onPostAdd(e.target.value)
+                        console.log(e.target.value)
+                    }}/>
                     <PostPost />
                 </CardContent>
                 <CardActions>
@@ -57,12 +60,12 @@ function SimpleCard(props) {
 
 SimpleCard.propTypes = {
     classes: PropTypes.object.isRequired,
-    onpostAdd: PropTypes.func.isRequired,
+    onPostAdd: PropTypes.func.isRequired,
 };
 
 // Below, we are mapping state to props and dispatching
 // Same layout as with mapStateToProps:
 //   export default connect (state, { dispatched action })(Component)
-// set onpostAdd to postAdd for clarity in code
+// set onPostAdd to postAdd for clarity in code
 
-export default connect(state => { }, { onpostAdd: postAdd })(withStyles(styles)(SimpleCard));
+export default connect(state => { }, { onPostAdd: postAdd })(withStyles(styles)(SimpleCard));

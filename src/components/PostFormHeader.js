@@ -4,8 +4,6 @@ import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 
-import Help from './QuestionToolTip';
-
 const styles = theme => ({
     root: theme.mixins.gutters({
         backgroundColor: '#2C98F0',
