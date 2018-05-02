@@ -7,15 +7,20 @@ import Typography from 'material-ui/Typography';
 
 const styles = {
     root: {
-        flexGrow: 1,
-    },
+        flexGrow: 1
+    }
 };
+
+const customStyles = {
+    backgroundColor: '#fff',
+    color: '#BDBCBF'
+}
 
 function SimpleAppBar(props) {
     const { classes } = props;
     return (
         <div className={classes.root}>
-            <AppBar position="fixed" color="default">
+            <AppBar position="fixed" color="default" style={customStyles}>
                 <Toolbar>
                     <Typography variant="title" color="inherit">
                         The Redux Poster

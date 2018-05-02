@@ -52,4 +52,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { postsGet })(Posts);
+export default connect(mapStateToProps  , { postsGet })(Posts);

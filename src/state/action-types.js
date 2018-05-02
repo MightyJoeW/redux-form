@@ -13,7 +13,5 @@
 // Unsure how to name an action type? Refer to our guidelines:
 // https://wpcalypso.wordpress.com/devdocs/docs/our-approach-to-data.md#actions
 
-export const ENTRY_ADD = 'ENTRY_ADD';
 export const POSTS_GET = 'POSTS_GET';
-export const POST_ADD = 'POST_ADD';
-export const TITLE_ADD = 'TITLE_ADD';
+export const POST_ADD = 'POSTS_ADD';
