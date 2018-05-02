@@ -6,6 +6,7 @@ import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 
+import Header from './PostFormHeader';
 import PostTitle from './PostTitle';
 import PostPost from './PostPost';
 import { postAdd } from '../state/reducer';
@@ -38,6 +39,7 @@ function SimpleCard(props) {
     return (
         <div>
             <Card className={classes.card}>
+            <Header />
                 <CardContent>
                     <Typography className={classes.title} color="textSecondary">
                         Add Post
