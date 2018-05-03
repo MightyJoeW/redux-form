@@ -17,7 +17,7 @@ const styles = {
         marginLeft: 'auto',
         marginRight: 'auto',
         minWidth: 275,
-        width: '85%'
+        width: '75%'
     },
     bullet: {
         display: 'inline-block',

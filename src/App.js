@@ -1,6 +1,7 @@
 // EXTERNAL DEPENDENCIES
 import React, { Component } from 'react';
 import CssBaseline from 'material-ui/CssBaseline';
+import Card, { CardActions, CardContent } from 'material-ui/Card';
 
 // INTERNAL DEPENDENCIES
 import AppBar from './components/AppBar';
@@ -22,7 +23,9 @@ export default class App extends Component {
         <CssBaseline />
         <AppBar />
         <PostForm />
-        <Posts />
+        <Card style={{width: '75%', margin: '50px auto'}}>
+          <Posts />
+        </Card>
       </div>
     );
   }

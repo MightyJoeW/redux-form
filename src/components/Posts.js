@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import Divider from 'material-ui/Divider';
 
 // INTERNAL DEPENDENCIES
 import { postsGet } from '../state/reducer';
@@ -11,7 +12,7 @@ import CircleLoad from './CircleLoad';
 const container = {
   marginLeft: 'auto',
   marginRight: 'auto',
-  width: '85%'
+  width: '75%'
 }
 
 const postStyles = {
@@ -40,6 +41,7 @@ class Posts extends Component {
         <div style={postStyles} key={post.id}>
           <h3 style={titleStyles}>{post.title}</h3>
           <p>{post.body}</p>
+          <Divider />
           <br />
         </div>
       )

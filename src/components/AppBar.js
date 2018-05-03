@@ -9,7 +9,7 @@ import Loop from '@material-ui/icons/Loop';
 
 const appbarStyles = {
     backgroundColor: '#fff',
-    color: '#BDBCBF'
+    color: '#999999'
 }
 
 const navItemStyles = {
