@@ -1,12 +1,14 @@
 import {
     POSTS_GET,
-    POST_ADD
+    POST_COMMENT_UPDATE,
+    POST_TITLE_UPDATE
 } from './action-types';
 
 // INITIAL STATE
 let initialState = {
     posts: [],
-    post: ''
+    postComment: '',
+    postTitle: ''
 }
 
 // ACTION CREATORS
@@ -15,18 +17,25 @@ export const postsGet = posts => ({
         payload: posts
 })
 
-export const postAdd= post => ({
-    type: POST_ADD,
-    payload: post
+export const postCommentUpdate = postComment => ({
+    type: POST_COMMENT_UPDATE,
+    payload: postComment
+})
+
+export const postTitleUpdate = postTitle => ({
+    type: POST_TITLE_UPDATE,
+    payload: postTitle
 })
 
 // REDUCERS
 const reducer = (state = initialState, action) => {
     switch(action.type) {
-    case POSTS_GET:
-        return Object.assign({}, state, { posts: action.payload})
-    case POST_ADD:
-        return Object.assign({}, state, { post: action.payload})
+        case POSTS_GET:
+            return Object.assign({}, state, { posts: action.payload})
+        case POST_TITLE_UPDATE:
+            return Object.assign({}, state, { postTitle: action.payload})
+        case POST_COMMENT_UPDATE:
+            return Object.assign({}, state, {postComment: action.payload})
         default:
             return state
     }

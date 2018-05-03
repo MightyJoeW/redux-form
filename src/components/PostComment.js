@@ -1,7 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import TextField from 'material-ui/TextField';
+
+import { postCommentUpdate } from '../state/reducer';
 
 const styles = theme => ({
     container: {
@@ -25,7 +28,7 @@ class TextFields extends React.Component {
 
     handleChange = name => event => {
         this.setState({
-            [name]: event.target.value,
+            [name]: event.target.value
         });
     };
 
@@ -51,6 +54,9 @@ class TextFields extends React.Component {
 
 TextFields.propTypes = {
     classes: PropTypes.object.isRequired,
+    onPostCommentUpdate: PropTypes.func.isRequired,
 };
 
-export default withStyles(styles)(TextFields);
+export default connect(state => { }, {
+    onPostCommentUpdate: postCommentUpdate
+})(withStyles(styles)(TextFields));
