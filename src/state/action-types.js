@@ -13,6 +13,7 @@
 // Unsure how to name an action type? Refer to our guidelines:
 // https://wpcalypso.wordpress.com/devdocs/docs/our-approach-to-data.md#actions
 
+export const FORM_SUBMIT = 'FORM_SUBMIT';
 export const POSTS_GET = 'POSTS_GET';
 export const POST_COMMENT_UPDATE = 'POST_COMMENT_UPDATE';
 export const POST_TITLE_UPDATE = 'POST_TITLE_UPDATE';

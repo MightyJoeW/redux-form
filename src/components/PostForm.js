@@ -10,6 +10,7 @@ import TextField from 'material-ui/TextField';
 
 import Header from './PostFormHeader';
 import {
+    formSubmit,
     postCommentUpdate,
     postTitleUpdate
 } from '../state/reducer';
@@ -38,10 +39,7 @@ const styles = {
 
 function SimpleCard(props) {
     const { classes } = props;
-    const SubmitButton = props.postTitle === ''
-        ? <Button size="small" disabled>Submit</Button>
-        : <Button size="small">Submit</Button>
-    // console.log(props.onPostTitleUpdate)
+    // console.log(props.onPostTitleUpdate);
     return (
         <div>
             <Card className={classes.card}>
@@ -51,32 +49,34 @@ function SimpleCard(props) {
                         Add Post
                     </Typography>
                     <Input
+                        fullWidth
+                        placeholder="Title"
+                        className={classes.input}
                         onChange={(e) => {
                             props.onPostTitleUpdate(e.target.value)
                             console.log(e.target.value)
                         }}
-                        placeholder="Title"
-                        className={classes.input}
                         inputProps={{
                             'aria-label': 'Description',
                         }}
                     />
                     <br />
                     <TextField
-                        onChange={(e) => {
-                            props.onPostCommentUpdate(e.target.value)
-                            console.log(e.target.value)
-                        }}
                         id="multiline-flexible"
                         label="Post"
+                        fullWidth
                         multiline
                         rowsMax="4"
                         className={classes.textField}
                         margin="normal"
+                        onChange={(e) => {
+                            props.onPostCommentUpdate(e.target.value)
+                            console.log(e.target.value)
+                        }}
                     />
                 </CardContent>
                 <CardActions>
-                    {SubmitButton}
+                    <Button size="small" onClick={props.onFormSubmit}>Submit</Button>
                 </CardActions>
             </Card>
         </div>
@@ -85,6 +85,7 @@ function SimpleCard(props) {
 
 SimpleCard.propTypes = {
     classes: PropTypes.object.isRequired,
+    onFormSubmit: PropTypes.func.isRequired,
     onPostCommentUpdate: PropTypes.func.isRequired,
     onPostTitleUpdate: PropTypes.func.isRequired,
 };
@@ -95,6 +96,7 @@ SimpleCard.propTypes = {
 // set onPostTitleUpdate to postTitleUpdate for clarity in code
 
 export default connect(state => { }, {
+    onFormSubmit: formSubmit,
     onPostCommentUpdate: postCommentUpdate,
     onPostTitleUpdate: postTitleUpdate
 })(withStyles(styles)(SimpleCard));

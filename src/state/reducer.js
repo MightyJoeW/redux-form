@@ -1,4 +1,5 @@
 import {
+    FORM_SUBMIT,
     POSTS_GET,
     POST_COMMENT_UPDATE,
     POST_TITLE_UPDATE
@@ -12,6 +13,10 @@ let initialState = {
 }
 
 // ACTION CREATORS
+export const formSubmit = () => ({
+    type: FORM_SUBMIT
+})
+
 export const postsGet = posts => ({
         type: POSTS_GET,
         payload: posts
@@ -30,6 +35,11 @@ export const postTitleUpdate = postTitle => ({
 // REDUCERS
 const reducer = (state = initialState, action) => {
     switch(action.type) {
+        case FORM_SUBMIT:
+            return Object.assign({}, state, {
+                postTitle: `New title: ${state.postTitle}`,
+                postComment: `New comment: ${state.postComment}`
+            })
         case POSTS_GET:
             return Object.assign({}, state, { posts: action.payload})
         case POST_TITLE_UPDATE:
