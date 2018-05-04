@@ -69,7 +69,6 @@ function SimpleCard(props) {
                         rowsMax="4"
                         className={classes.textField}
                         margin="normal"
-                        hintText="Enter a comment"
                         onChange={(e) => {
                             props.onPostCommentUpdate(e.target.value)
                             console.log(e.target.value)
