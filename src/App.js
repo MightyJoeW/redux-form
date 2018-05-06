@@ -5,13 +5,14 @@ import Card from 'material-ui/Card';
 
 // INTERNAL DEPENDENCIES
 import AppBar from './components/AppBar';
+import Footer from './components/Footer';
 import PostForm from './components/PostForm';
 import Posts from './components/Posts';
 
 // LOCAL VARIABLES
 const styles = {
   color: '#4f4f4f',
-  fontFamily: 'arial',
+  fontFamily: 'ariel',
   margin: 'auto'
 }
 
@@ -23,9 +24,10 @@ export default class App extends Component {
         <CssBaseline />
         <AppBar />
         <PostForm />
-        <Card style={{width: '75%', margin: '50px auto'}}>
+        <Card style={{ width: '75%', margin: '50px auto 0 auto' }}>
           <Posts />
         </Card>
+        <Footer />
       </div>
     );
   }
