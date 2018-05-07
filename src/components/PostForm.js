@@ -1,13 +1,15 @@
+// EXTERNAL DEPENDENCIES
 import React from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
+import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Input from 'material-ui/Input';
+import PropTypes from 'prop-types';
 import TextField from 'material-ui/TextField';
+import Typography from 'material-ui/Typography';
+import { connect } from 'react-redux';
+import { withStyles } from 'material-ui/styles';
 
+// INTERNAL DEPENDENCIES
 import Header from './PostFormHeader';
 import {
     formSubmit,
@@ -15,6 +17,7 @@ import {
     postTitleUpdate
 } from '../state/reducer';
 
+// LOCAL VARIABLES
 const styles = {
     card: {
         marginTop: 100,
@@ -37,6 +40,7 @@ const styles = {
     },
 };
 
+// COMPONENT DEFINITION
 function SimpleCard(props) {
     const { classes } = props;
     // console.log(props.onPostTitleUpdate);

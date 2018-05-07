@@ -1,12 +1,13 @@
+// EXTERNAL DEPENDENCIES
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
+import Loop from '@material-ui/icons/Loop';
+import PropTypes from 'prop-types';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import Loop from '@material-ui/icons/Loop';
+import { withStyles } from 'material-ui/styles';
 
-
+// LOCAL VARIABLES
 const appbarStyles = {
     backgroundColor: '#fff',
     color: '#999999'
@@ -23,6 +24,7 @@ const styles = {
     }
 };
 
+// COMPONENT DEFINITION
 function SimpleAppBar(props) {
     const { classes } = props;
     return (

@@ -1,6 +1,6 @@
 // External Dependencies
-import { combineReducers } from 'redux';
 import createReducer from '../createReducer';
+import { combineReducers } from 'redux';
 
 // Internal Dependencies
 import {
