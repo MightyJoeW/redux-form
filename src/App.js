@@ -12,8 +12,14 @@ import Posts from './components/Posts';
 // LOCAL VARIABLES
 const styles = {
   color: '#4f4f4f',
+  height: '100vh',
   fontFamily: 'ariel',
   margin: 'auto'
+}
+
+const cardStyles = {
+  margin: '40px auto 0 auto',
+  width: '75%'
 }
 
 // COMPONENT DEFINITION
@@ -24,7 +30,7 @@ export default class App extends Component {
         <CssBaseline />
         <AppBar />
         <PostForm />
-        <Card style={{ width: '75%', margin: '50px auto 0 auto' }}>
+        <Card style={cardStyles}>
           <Posts />
         </Card>
         <Footer />

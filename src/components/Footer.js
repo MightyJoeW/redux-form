@@ -6,7 +6,7 @@ import moment from 'moment';
 const rootStyles = {
     color: 'lightBlack',
     fontSize: 13,
-    padding: '24px 0px',
+    padding: '24px 0',
     textAlign: 'center',
 };
 
