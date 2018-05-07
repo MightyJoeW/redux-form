@@ -17,7 +17,6 @@ const cardStyles = {
 
 const styles = {
   color: '#4f4f4f',
-  height: '100vh',
   fontFamily: 'ariel',
   margin: 'auto'
 }
