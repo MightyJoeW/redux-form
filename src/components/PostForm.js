@@ -21,7 +21,7 @@ const styles = {
         marginLeft: 'auto',
         marginRight: 'auto',
         minWidth: 275,
-        width: '75%'
+        width: '85%'
     },
     bullet: {
         display: 'inline-block',
@@ -43,7 +43,7 @@ function SimpleCard(props) {
     return (
         <div>
             <Card className={classes.card}>
-            <Header />
+                <Header />
                 <CardContent>
                     <Typography className={classes.title} color="textSecondary">
                         Add Post
