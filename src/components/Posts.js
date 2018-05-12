@@ -1,14 +1,14 @@
 // EXTERNAL DEPENDENCIES
 import React, { Component } from 'react';
+import Divider from 'material-ui/Divider';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import Divider from 'material-ui/Divider';
 
 // INTERNAL DEPENDENCIES
-import { postsGet } from '../state/reducer';
 import CircleLoad from './CircleLoad';
+import { postsGet } from '../state/reducer';
 
-
+// LOCAL VARIABLES
 const container = {
   marginLeft: 'auto',
   marginRight: 'auto',
@@ -19,7 +19,6 @@ const postStyles = {
   margin: 30
 }
 
-// LOCAL VARIABLES
 const titleStyles = {
   fontWeight: 700
 }

@@ -1,12 +1,14 @@
+// EXTERNAL DEPENDENCIES
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import Paper from 'material-ui/Paper';
-import Typography from 'material-ui/Typography';
 import HelpIcon from '@material-ui/icons/Help';
 import IconButton from 'material-ui/IconButton';
+import Paper from 'material-ui/Paper';
+import PropTypes from 'prop-types';
 import Tooltip from 'material-ui/Tooltip';
+import Typography from 'material-ui/Typography';
+import { withStyles } from 'material-ui/styles';
 
+// LOCAL VARIABLES
 const styles = theme => ({
     root: theme.mixins.gutters({
         backgroundColor: '#2C98F0',
@@ -17,6 +19,7 @@ const styles = theme => ({
     }),
 });
 
+// COMPONENT DEFINITION
 function PaperSheet(props) {
     const { classes } = props;
     return (
