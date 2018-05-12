@@ -29,7 +29,7 @@ export default class App extends Component {
         <CssBaseline />
         <AppBar />
         <PostForm />
-        <Card style={cardStyles}>
+        <Card style={{ width: '85%', margin: '50px auto 0 auto' }}>
           <Posts />
         </Card>
         <Footer />
